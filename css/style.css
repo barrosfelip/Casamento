@@ -141,7 +141,7 @@ footer { padding: 30px 15px;
  margin-top: 40px;
  } 
 
-more-gifts { 
+.more-gifts { 
   width: 100%;
   display: flex;
   justify-content: center;
@@ -161,6 +161,7 @@ more-gifts {
 .more-gifts .btn-more:hover { 
  background: #b8a46a;
  color: #ffffff;
+}
 .btn-gift { 
  display: inline-block;
  margin-top: 15px;
@@ -178,17 +179,7 @@ more-gifts {
  .btn-gift:hover { 
   background: #9f8c55;
  } 
-
 }
-
-
-
-
-
-
-
-
-
 
 
 
