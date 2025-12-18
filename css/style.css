@@ -90,7 +90,7 @@ h1 {
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
  gap: 30px;
- margin: auto;
+/*margin: auto; */
  margin-top: 40px
  } 
 .gift-card { 
@@ -173,6 +173,7 @@ more-gifts {
   background: #9f8c55;
  } 
 }
+
 
 
 
