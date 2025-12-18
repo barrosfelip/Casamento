@@ -149,16 +149,7 @@ footer {
   min-height: 100vh;
 }
 
-.more-gifts {
-  text-align: center;
-  margin-top: 30px;
-}
-  .more-gifts {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.more-gifts {
+more-gifts {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -174,6 +165,7 @@ footer {
   border: 2px solid #b8a46a;
   color: #b8a46a;
   background: transparent;
+  border-radius: 30px;
 
   transition: all 0.3s ease;
 }
