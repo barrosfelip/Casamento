@@ -27,7 +27,7 @@ body {
 }
 
   .bg-site {
-  background-image: url("../assets/Fundo.jpeg");
+  background-image: url("../assets/fundo.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -170,6 +170,7 @@ more-gifts {
  } 
 
 }
+
 
 
 
