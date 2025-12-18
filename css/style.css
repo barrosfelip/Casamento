@@ -1,201 +1,102 @@
-* {* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: linear-gradient(180deg, #f4f7f3, #eef3ed);
-  font-family: 'Playfair Display', serif;
-  color: #5a5a5a;
-}
-
-/* ================= HERO ================= */
-
-body {
-  background-image: url("../assets/fundo.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  font-family: 'Playfair Display', serif;
-  color: #5a5a5a;
-}
-   
-.hero {
-  background-image: url("../assets/fundo.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  padding: 80px 15px;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  background: #ffffffee;
-  border: 1px solid #cfd8cc;
-  max-width: 420px;
-  width: 100%;
-  padding: 40px 25px;
-  text-align: center;
-}
-
-/* ================= TEXTOS ================= */
-
-.save {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
-  color: #8c9b88;
-}
-
-.script {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  color: #b8a46a;
-  display: block;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: 2.4rem;
-  color: #6f7f6b;
-}
-
-.amp {
-  font-size: 1.5rem;
-  color: #b8a46a;
-}
-
-.text {
-  margin: 20px 0;
-  font-size: 0.95rem;
-}
-
-/* ================= INFO ================= */
-
-.info {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-
-.info strong {
-  font-size: 1.4rem;
-  color: #6f7f6b;
-}
-
-.info span {
-  display: block;
-  font-size: 0.75rem;
-}
-
-/* ================= LOCAL ================= */
-
-.local {
-  font-size: 0.85rem;
-  margin-top: 10px;
-}
-
-/* ================= PRESENTES ================= */
-
-.gifts-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.gifts-section h2 {
-  color: #6f7f6b;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 0.9rem;
-  margin-bottom: 35px;
-}
-
-.gifts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.gift-card {
-  background: #fff;
-  border: 1px solid #e2e6df;
-  padding: 25px;
-}
-
-.gift-card h3 {
-  margin-bottom: 10px;
-}
-
-.gift-card span {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-/* ================= BOTÃO PRESENTEAR ================= */
-
-.btn-gift {
-  display: inline-block;
-  padding: 12px 26px;
-  background: #b8a46a;
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-gift:hover {
-  background: #9f8c55;
-}
-
-/* ================= VER MAIS / VOLTAR ================= */
-
-.more-gifts {
-  margin-top: 70px;
-  display: flex;
-  justify-content: center;
-}
-
-.more-gifts .btn-more {
-  text-decoration: none;
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  padding: 14px 32px;
-
-  border: 2px solid #b8a46a;
-  color: #b8a46a;
-  background: transparent;
-  border-radius: 30px;
-
-  transition: all 0.3s ease;
-}
-
-.more-gifts .btn-more:hover {
-  background: #b8a46a;
-  color: #ffffff;
-}
-
-/* ================= FOOTER ================= */
-
-footer {
-  padding: 30px 15px;
-  text-align: center;
-  background: #ffffff;
-  margin-top: 60px;
-}
-
-
-
-
-
-
+* { margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ } body { background: linear-gradient(180deg, #f4f7f3, #eef3ed);
+ font-family: 'Playfair Display', serif;
+ color: #5a5a5a;
+ } /* HERO */ .hero { padding: 60px 15px;
+ display: flex;
+ justify-content: center;
+ } .card { background: #ffffffee;
+ border: 1px solid #cfd8cc;
+ max-width: 420px;
+ width: 100%;
+ padding: 40px 25px;
+ text-align: center;
+ } /* TEXTOS */ .save { text-transform: uppercase;
+ letter-spacing: 2px;
+ font-size: 0.75rem;
+ color: #8c9b88;
+ } .script { font-family: 'Great Vibes', cursive;
+ font-size: 2rem;
+ color: #b8a46a;
+ display: block;
+ margin-bottom: 10px;
+ } h1 { font-size: 2.4rem;
+ color: #6f7f6b;
+ } .amp { font-size: 1.5rem;
+ color: #b8a46a;
+ } .text { margin: 20px 0;
+ font-size: 0.95rem;
+ } /* INFO */ .info { display: flex;
+ justify-content: space-around;
+ margin: 20px 0;
+ } .info strong { font-size: 1.4rem;
+ color: #6f7f6b;
+ } .info span { display: block;
+ font-size: 0.75rem;
+ } /* LOCAL */ .local { font-size: 0.85rem;
+ margin-top: 10px;
+ } /* PRESENTES */ .gifts-section { padding: 40px 20px;
+ text-align: center;
+ } .gifts-section h2 { color: #6f7f6b;
+ margin-bottom: 10px;
+ } .subtitle { font-size: 0.9rem;
+ margin-bottom: 25px;
+ } .gifts { display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ gap: 15px;
+ max-width: 900px;
+ margin: auto;
+ } .gift-card { background: #fff;
+ border: 1px solid #e2e6df;
+ padding: 20px;
+ } .gift-card h3 { margin-bottom: 10px;
+ } .gift-card span { display: block;
+ font-weight: bold;
+ margin-bottom: 10px;
+ } .gift-card button { background: #b8a46a;
+ color: #fff;
+ border: none;
+ padding: 10px 15px;
+ cursor: pointer;
+ } .gift-card button:hover { background: #a08f5c;
+ } /* FOOTER */ footer { padding: 30px 15px;
+ text-align: center;
+ background: #fff;
+ margin-top: 40px;
+ } .hero { background-image: url("../assets/fundo.jpeg");
+ background-size: cover;
+ /* melhor para fundo */ background-position: center;
+ background-repeat: no-repeat;
+ padding: 80px 15px;
+ min-height: 100vh;
+ } more-gifts { width: 100%;
+ display: flex;
+ justify-content: center;
+ margin-top: 40px;
+ } .more-gifts .btn-more { text-decoration: none;
+ font-family: 'Playfair Display', serif;
+ font-size: 16px;
+ padding: 14px 28px;
+ border: 2px solid #b8a46a;
+ color: #b8a46a;
+ background: transparent;
+ border-radius: 30px;
+ transition: all 0.3s ease;
+ } .more-gifts .btn-more:hover { background: #b8a46a;
+ color: #ffffff;
+ .btn-gift { display: inline-block;
+ margin-top: 15px;
+ padding: 12px 26px;
+ font-family: 'Playfair Display', serif;
+ font-size: 15px;
+ background: #b8a46a;
+ color: #ffffff;
+ border-radius: 30px;
+ text-decoration: none;
+ border: none;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ } .btn-gift:hover { background: #9f8c55;
+ } }
