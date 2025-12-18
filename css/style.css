@@ -124,14 +124,16 @@ footer { padding: 30px 15px;
  margin-top: 40px;
  } 
 
-.hero { 
- background-image: url("../assets/fundo.jpeg");
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- padding: 80px 15px;
- min-height: 100vh;
- } 
+.hero {
+  background-image: url("../assets/floral-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 80px 15px;
+  display: flex;
+  justify-content: center;
+}
 
 more-gifts { 
   width: 100%;
@@ -171,6 +173,7 @@ more-gifts {
   background: #9f8c55;
  } 
 }
+
 
 
 
