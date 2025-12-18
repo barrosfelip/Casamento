@@ -140,13 +140,19 @@ footer {
   margin-top: 40px;
 }
 .hero {
-  background-image: url("../assets/Fundo.jpeg");
-  background-size: contain;
+  background-image: url("../assets/fundo.jpeg");
+  background-size: cover; /* melhor para fundo */
   background-position: center;
   background-repeat: no-repeat;
 
   padding: 80px 15px;
+  min-height: 100vh;
+}
 
+.more-gifts {
+  text-align: center;
+  margin-top: 30px;
+}
   .more-gifts {
   text-align: center;
   margin-top: 30px;
@@ -176,5 +182,6 @@ footer {
   background: #b8a46a;
   color: #ffffff;
 }
+
 
 
