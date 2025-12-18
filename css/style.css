@@ -124,17 +124,6 @@ footer { padding: 30px 15px;
  margin-top: 40px;
  } 
 
-.hero {
-  background-image: url("../assets/Fundo.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  padding: 80px 15px;
-  display: flex;
-  justify-content: center;
-}
-
 more-gifts { 
   width: 100%;
   display: flex;
@@ -173,6 +162,7 @@ more-gifts {
   background: #9f8c55;
  } 
 }
+
 
 
 
