@@ -12,20 +12,6 @@ body {
 
 /* HERO */ 
 
-.hero { 
- padding: 60px 15px;
- display: flex;
- justify-content: center;
- } 
-.card { 
- background: #ffffffee;
- border: 1px solid #cfd8cc;
- max-width: 420px;
- width: 100%;
- padding: 40px 25px;
- text-align: center;
- } 
-
 /* TEXTOS */ 
 .save { 
  text-transform: uppercase;
@@ -170,4 +156,5 @@ footer { padding: 30px 15px;
   background: #9f8c55;
  } 
 }
+
 
