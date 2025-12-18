@@ -17,7 +17,11 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  font-family: 'Playfair Display', serif;
+  color: #5a5a5a;
 }
+   
 .hero {
   background-image: url("../assets/fundo.jpeg");
   background-size: cover;
@@ -143,17 +147,11 @@ h1 {
 .btn-gift {
   display: inline-block;
   padding: 12px 26px;
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-
   background: #b8a46a;
-  color: #ffffff;
+  color: #fff;
   border-radius: 30px;
   text-decoration: none;
-  border: none;
-
-  cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn-gift:hover {
@@ -163,10 +161,9 @@ h1 {
 /* ================= VER MAIS / VOLTAR ================= */
 
 .more-gifts {
-  width: 100%;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
-  margin-top: 60px;
 }
 
 .more-gifts .btn-more {
@@ -196,6 +193,7 @@ footer {
   background: #ffffff;
   margin-top: 60px;
 }
+
 
 
 
