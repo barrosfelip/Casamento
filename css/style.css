@@ -173,7 +173,30 @@ more-gifts {
 .more-gifts .btn-more:hover {
   background: #b8a46a;
   color: #ffffff;
+
+  .btn-gift {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 26px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+
+  background: #b8a46a;
+  color: #ffffff;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.btn-gift:hover {
+  background: #9f8c55;
+}
+}
+
 
 
 
