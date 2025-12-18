@@ -11,10 +11,25 @@ body {
  } 
 
 /* HERO */
-.hero {
+/*.hero {
   padding: 60px 15px;
   display: flex;
   justify-content: center;
+}*/
+
+.hero {
+  min-height: 100vh; /* ocupa 1 tela inteira */
+  
+  background-image: url("../assets/fundo.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 15px;
 }
 
 .card {
@@ -24,14 +39,6 @@ body {
   width: 100%;
   padding: 40px 25px;
   text-align: center;
-}
-
-body {
-  background-image: url("../assets/fundo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
 }
 
 /* TEXTOS */ 
@@ -171,6 +178,7 @@ more-gifts {
  } 
 
 }
+
 
 
 
