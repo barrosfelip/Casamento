@@ -19,8 +19,7 @@ body {
   background-repeat: no-repeat;
 
   padding: 80px 15px;
-  min-height: 100vh;
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,5 +190,6 @@ footer {
   background: #ffffff;
   margin-top: 60px;
 }
+
 
 
