@@ -139,3 +139,17 @@ footer {
   background: #fff;
   margin-top: 40px;
 }
+/* Nomes do casal */
+.names {
+  font-family: 'Great Vibes', cursive; /* mesma fonte do & */
+  color: #6f7f6b; /* mantém a cor original */
+  font-size: 2.8rem;
+}
+
+/* & continua separado */
+.amp {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #b8a46a; /* dourado */
+  margin: 5px 0;
+}
