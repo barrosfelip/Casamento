@@ -26,11 +26,12 @@ body {
   text-align: center;
 }
 
-  .bg-site {
+body {
   background-image: url("../assets/fundo.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  min-height: 100vh;
 }
 
 /* TEXTOS */ 
@@ -170,6 +171,7 @@ more-gifts {
  } 
 
 }
+
 
 
 
