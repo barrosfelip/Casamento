@@ -89,10 +89,12 @@ h1 {
  } 
 
 /* PRESENTES */ 
-.gifts-section { 
- padding: 40px 20px;
- text-align: center;
- } 
+.gifts-section {
+  background: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  box-shadow: 0 -20px 40px rgba(0,0,0,0.03);
+}
 .gifts-section h2 { 
  color: #6f7f6b;
  margin-bottom: 10px;
@@ -178,6 +180,7 @@ more-gifts {
  } 
 
 }
+
 
 
 
