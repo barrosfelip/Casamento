@@ -104,12 +104,13 @@ h1 {
  margin-bottom: 25px;
  } 
 .gifts { 
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
- gap: 30px;
-/*margin: auto; */
- margin-top: 40px
- } 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
 .gift-card { 
  background: #fff;
  border: 1px solid #e2e6df;
@@ -147,17 +148,14 @@ footer { padding: 30px 15px;
   justify-content: center;
   margin-top: 40px;
  } 
-.more-gifts .btn-more { 
- text-decoration: none;
- font-family: 'Playfair Display', serif;
- font-size: 16px;
- padding: 14px 28px;
- border: 2px solid #b8a46a;
- color: #b8a46a;
- background: transparent;
- border-radius: 30px;
- transition: all 0.3s ease;
- } 
+.more-gifts .btn-more {
+  text-decoration: none;
+  padding: 14px 28px;
+  border: 2px solid #b8a46a;
+  color: #b8a46a;
+  border-radius: 30px;
+  transition: 0.3s;
+}
 .more-gifts .btn-more:hover { 
  background: #b8a46a;
  color: #ffffff;
@@ -180,6 +178,7 @@ footer { padding: 30px 15px;
   background: #9f8c55;
  } 
 }
+
 
 
 
