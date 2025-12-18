@@ -161,7 +161,14 @@ more-gifts {
  .btn-gift:hover { 
   background: #9f8c55;
  } 
+  .bg-site {
+  background-image: url("../assets/Fundo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+}
+
 
 
 
