@@ -20,6 +20,10 @@ body {
 
   padding: 80px 15px;
   min-height: 100vh;
+
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -187,4 +191,5 @@ footer {
   background: #ffffff;
   margin-top: 60px;
 }
+
 
