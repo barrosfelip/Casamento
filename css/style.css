@@ -235,21 +235,40 @@ footer { padding: 30px 15px;
 
 /* DIVISÂO SECÇÃO*/
 
-.divisor-dourado {
-    height: 1px; /* Linha bem fininha */
-    width: 60%;  /* Não ocupa a tela toda, fica centralizada */
-    max-width: 400px; 
-    margin: 60px auto; /* Dá espaço entre as seções (60px em cima e embaixo) */
-    background: linear-gradient(
-        to right, 
-        transparent, 
-        #d4af37, /* Dourado clássico */
-        #fbf5b7, /* Brilho central (opcional) */
-        #d4af37, 
-        transparent
-    );
-    opacity: 0.8;
+.divisor-fleur-de-lis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+    width: 80%;
+    max-width: 600px;
 }
+
+/* Cria as linhas laterais */
+.divisor-fleur-de-lis::before,
+.divisor-fleur-de-lis::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    /* Gradiente para a linha sumir nas pontas */
+    background: linear-gradient(to right, transparent, #d4af37);
+}
+
+/* Inverte o gradiente da linha da direita */
+.divisor-fleur-de-lis::after {
+    background: linear-gradient(to left, transparent, #d4af37);
+}
+
+/* Estilização da Flor de Liz no centro */
+.divisor-fleur-de-lis .icon {
+    color: #d4af37;
+    font-size: 28px; /* Tamanho da Flor de Liz */
+    padding: 0 20px;
+    /* Efeito de brilho suave no dourado */
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    font-family: serif;
+}
+
 
 
 
