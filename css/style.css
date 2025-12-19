@@ -234,6 +234,28 @@ footer { padding: 30px 15px;
 }
 
 
+/* ================= DIVISOR DE SEÇÕES ================= */
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin: 80px 0;
+}
+
+.divider-line {
+  width: 80px;
+  height: 1px;
+  background-color: #b8a46a;
+  opacity: 0.8;
+}
+
+.divider-icon {
+  font-size: 20px;
+  color: #b8a46a;
+}
 
 
 
