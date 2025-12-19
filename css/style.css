@@ -301,25 +301,26 @@ footer { padding: 30px 15px;
     margin-top: 20px;
 }
 
+
+
+
 /* data do evento */
+/* AJUSTE NA SEÇÃO DE EVENTO - PADRÃO BEGE */
 #evento-detalhes {
-    background-color: #f9f7f2; /* Bege claro / Off-white */
+    background: linear-gradient(180deg, #f4f7f3, #eef3ed); /* Mesmo fundo do seu body */
     padding: 80px 20px;
     text-align: center;
-    color: #333333; /* Texto principal em cinza chumbo para leitura */
-    font-family: 'serif';
+    color: #5a5a5a;
 }
 
-/* Título em Dourado mais intenso para contrastar com o bege */
 #status-evento {
-    color: #b8974d; 
-    font-size: 2.2rem;
+    font-family: 'Playfair Display', serif;
+    color: #6f7f6b; /* Seu verde padrão */
+    font-size: 2rem;
     margin-bottom: 30px;
-    font-weight: normal;
-    font-family: 'Playfair Display', serif; /* Se não tiver essa fonte, ele usa a padrão serif */
 }
 
-/* Timer Minimalista no Fundo Claro */
+/* Timer seguindo o estilo dos seus cards */
 #timer {
     display: flex;
     justify-content: center;
@@ -329,67 +330,57 @@ footer { padding: 30px 15px;
 
 .tempo-box {
     padding: 15px;
-    min-width: 70px;
-    background: #ffffff; /* Fundo branco nos quadradinhos para dar profundidade */
-    border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* Sombra bem leve */
+    min-width: 75px;
+    background: #ffffff;
+    border: 1px solid #cfd8cc; /* Sua borda padrão */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 
 .tempo-box span {
     display: block;
     font-size: 1.8rem;
-    color: #333333;
+    color: #6f7f6b; /* Seu verde */
     font-weight: bold;
 }
 
 .tempo-box small {
-    color: #b8974d; /* Dourado nos rótulos */
+    color: #b8a46a; /* Seu dourado */
     text-transform: uppercase;
     font-size: 0.7rem;
     letter-spacing: 1px;
 }
 
-/* Bloco de Informações */
+/* Informações do Local */
 .info-container {
     max-width: 700px;
     margin: 0 auto;
-    padding: 20px;
-}
-
-.info-item h3 {
-    color: #b8974d;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
 }
 
 .info-item p {
-    color: #555555;
-    font-size: 1.1rem;
-    margin: 8px 0;
+    font-size: 1rem;
+    color: #5a5a5a;
+    margin: 5px 0;
 }
 
-/* Link estilo botão minimalista */
-.link-maps {
+.info-item strong {
+    color: #6f7f6b;
+}
+
+/* Reutilizando sua classe de botão para o mapa */
+#evento-detalhes .btn-more {
+    margin-top: 20px;
     display: inline-block;
-    margin-top: 25px;
-    color: #b8974d;
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    border: 1px solid #b8974d;
-    padding: 10px 25px;
-    transition: 0.3s;
 }
 
-.link-maps:hover {
-    background-color: #b8974d;
-    color: #ffffff;
-}
-
-/* Divisor especial para fundo claro */
+/* Correção da Flor de Liz no fundo claro */
 .divisor-fleur-de-lis {
     margin-bottom: 40px;
-    color: #b8974d;
+}
+.divisor-fleur-de-lis::before, .divisor-fleur-de-lis::after {
+    background: linear-gradient(to right, transparent, #b8a46a); /* Seu dourado */
+}
+.divisor-fleur-de-lis .icon {
+    color: #b8a46a;
 }
 
 
