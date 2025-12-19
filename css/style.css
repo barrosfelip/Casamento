@@ -302,109 +302,95 @@ footer { padding: 30px 15px;
 }
 
 /* data do evento */
-#evento {
+#evento-detalhes {
+    background-color: #f9f7f2; /* Bege claro / Off-white */
     padding: 80px 20px;
-    background-color: #000000; /* Preto puro igual ao seu hero */
-    color: #ffffff;
     text-align: center;
+    color: #333333; /* Texto principal em cinza chumbo para leitura */
+    font-family: 'serif';
 }
 
-.container-evento {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
+/* Título em Dourado mais intenso para contrastar com o bege */
 #status-evento {
-    font-family: serif;
-    font-size: 1.2rem;
-    color: #d4af37;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+    color: #b8974d; 
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-family: 'Playfair Display', serif; /* Se não tiver essa fonte, ele usa a padrão serif */
 }
 
-/* Timer Minimalista */
+/* Timer Minimalista no Fundo Claro */
 #timer {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
-.tempo {
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    padding: 10px;
-    min-width: 65px;
-    border-radius: 5px;
+.tempo-box {
+    padding: 15px;
+    min-width: 70px;
+    background: #ffffff; /* Fundo branco nos quadradinhos para dar profundidade */
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* Sombra bem leve */
 }
 
-.tempo span {
+.tempo-box span {
     display: block;
     font-size: 1.8rem;
-    color: #ffffff;
-    font-weight: 300;
+    color: #333333;
+    font-weight: bold;
 }
 
-.tempo small {
-    color: #d4af37;
-    font-size: 0.7rem;
+.tempo-box small {
+    color: #b8974d; /* Dourado nos rótulos */
     text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
 }
 
-/* Boxes de Informação */
-.info-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.box {
-    flex: 1;
-    min-width: 280px;
+/* Bloco de Informações */
+.info-container {
+    max-width: 700px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.box h3 {
+.info-item h3 {
+    color: #b8974d;
     font-size: 1.8rem;
-    color: #d4af37; /* Dourado do seu padrão */
-    margin-bottom: 10px;
-    font-family: 'Playfair Display', serif; /* Ou a fonte que você usa nos títulos */
+    margin-bottom: 15px;
 }
 
-.box p {
-    font-size: 1rem;
-    margin: 5px 0;
-    color: #f0f0f0;
+.info-item p {
+    color: #555555;
+    font-size: 1.1rem;
+    margin: 8px 0;
 }
 
-/* Botão seguindo o estilo minimalista */
-.btn-mapa {
+/* Link estilo botão minimalista */
+.link-maps {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
+    margin-top: 25px;
+    color: #b8974d;
     text-decoration: none;
     font-size: 0.8rem;
     letter-spacing: 2px;
-    transition: all 0.4s ease;
+    border: 1px solid #b8974d;
+    padding: 10px 25px;
+    transition: 0.3s;
 }
 
-.btn-mapa:hover {
-    background-color: #d4af37;
-    color: #000;
+.link-maps:hover {
+    background-color: #b8974d;
+    color: #ffffff;
 }
 
-/* Responsividade para o celular */
-@media (max-width: 600px) {
-    #timer { gap: 10px; }
-    .tempo { min-width: 55px; padding: 5px; }
-    .tempo span { font-size: 1.4rem; }
-    .box { padding: 10px; }
+/* Divisor especial para fundo claro */
+.divisor-fleur-de-lis {
+    margin-bottom: 40px;
+    color: #b8974d;
 }
-
-
 
 
 
