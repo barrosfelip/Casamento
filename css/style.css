@@ -235,12 +235,22 @@ footer { padding: 30px 15px;
 
 /* DIVISÂO SECÇÃO*/
 
-.divider-glow {
-  height: 1px;
-  width: 60%; /* Ajuste a largura conforme preferir */
-  margin: 40px auto;
-  background: linear-gradient(to right, transparent, #d4af37, transparent);
+.divisor-dourado {
+    height: 1px; /* Linha bem fininha */
+    width: 60%;  /* Não ocupa a tela toda, fica centralizada */
+    max-width: 400px; 
+    margin: 60px auto; /* Dá espaço entre as seções (60px em cima e embaixo) */
+    background: linear-gradient(
+        to right, 
+        transparent, 
+        #d4af37, /* Dourado clássico */
+        #fbf5b7, /* Brilho central (opcional) */
+        #d4af37, 
+        transparent
+    );
+    opacity: 0.8;
 }
+
 
 
 
