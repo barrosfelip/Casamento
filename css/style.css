@@ -179,6 +179,60 @@ footer { padding: 30px 15px;
  } 
 }
 
+/* HISTÓRIA DO CASAL */
+.story-section {
+  background: #f4f7f3;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.story-section h2 {
+  font-size: 2.2rem;
+  color: #6f7f6b;
+  margin-bottom: 30px;
+}
+
+.story-text {
+  max-width: 750px;
+  margin: 0 auto 60px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #5a5a5a;
+}
+
+.story-media {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  align-items: center;
+}
+
+.story-media img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e2e6df;
+}
+
+.story-media video {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e2e6df;
+  grid-column: span 2;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .story-media video {
+    grid-column: span 1;
+  }
+}
+
 
 
 
