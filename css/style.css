@@ -267,6 +267,39 @@ footer { padding: 30px 15px;
 }
 
 
+#nossa-historia {
+    padding: 60px 0; /* Espaço entre as seções */
+    background-color: #1a1a1a; /* Cor de fundo do seu site */
+}
+
+.container-historia {
+    width: 90%; /* Largura para telas menores */
+    max-width: 800px; /* Impede que o texto fique "esticado" e desalinhado no PC */
+    margin: 0 auto; /* Centraliza o bloco inteiro na tela */
+    padding: 0 20px; /* Garante que o texto não encoste na borda do celular */
+    box-sizing: border-box;
+}
+
+#nossa-historia h2 {
+    text-align: center;
+    color: #d4af37;
+    margin-bottom: 30px;
+}
+
+#nossa-historia p {
+    text-align: center; /* Mantém o texto alinhado com o título */
+    line-height: 1.8; /* Melhora a leitura */
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Ajuste para as fotos da seção */
+.container-historia img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
 
 
 
