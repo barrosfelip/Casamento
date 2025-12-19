@@ -239,34 +239,31 @@ footer { padding: 30px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 60px auto;
-    width: 80%;
-    max-width: 600px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    clear: both; /* Garante que não haja interferência de fotos flutuando */
 }
 
-/* Cria as linhas laterais */
 .divisor-fleur-de-lis::before,
 .divisor-fleur-de-lis::after {
     content: "";
     flex: 1;
     height: 1px;
-    /* Gradiente para a linha sumir nas pontas */
     background: linear-gradient(to right, transparent, #d4af37);
 }
 
-/* Inverte o gradiente da linha da direita */
 .divisor-fleur-de-lis::after {
     background: linear-gradient(to left, transparent, #d4af37);
 }
 
-/* Estilização da Flor de Liz no centro */
 .divisor-fleur-de-lis .icon {
     color: #d4af37;
-    font-size: 28px; /* Tamanho da Flor de Liz */
-    padding: 0 20px;
-    /* Efeito de brilho suave no dourado */
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-    font-family: serif;
+    font-size: 32px; /* Aumentei um pouco para dar destaque */
+    padding: 0 15px;
+    line-height: 1;
+    display: inline-block;
+    font-family: "Times New Roman", serif; /* Fontes serifadas desenham melhor esse símbolo */
 }
 
 
