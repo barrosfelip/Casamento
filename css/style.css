@@ -1,4 +1,6 @@
-/* 1. CONFIGURAÇÕES GERAIS */
+/* ============================================================
+   0. CONFIGURAÇÕES GERAIS E RESET
+   ============================================================ */
 * { 
     margin: 0; 
     padding: 0; 
@@ -6,13 +8,25 @@
 } 
 
 body { 
-    background-color: #fdfdfb; /* Um off-white bem leve para o fundo geral */
+    background-color: #fdfdfb; /* Fundo off-white geral */
     font-family: 'Playfair Display', serif;
     color: #5a5a5a;
     overflow-x: hidden;
+    text-align: center; /* Centralização base para textos */
 } 
 
-/* 2. HERO (Topo com a imagem do casal) */
+/* Estilos de textos reutilizáveis em várias seções */
+.script { 
+    font-family: 'Great Vibes', cursive; 
+    font-size: 2.2rem; 
+    color: #b8a46a; 
+    margin-bottom: 10px; 
+    display: block; 
+} 
+
+/* ============================================================
+   1. PRIMEIRA SEÇÃO: HERO (Abertura / Save the Date)
+   ============================================================ */
 .hero {
     min-height: 100vh;
     background-image: url("../assets/fundo.jpeg");
@@ -34,28 +48,33 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* 3. TEXTOS GERAIS */
 .save { text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; color: #8c9b88; } 
-.script { font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #b8a46a; margin-bottom: 10px; display: block; } 
 h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; } 
 .amp { font-size: 1.5rem; color: #b8a46a; } 
 
-/* 4. SEÇÃO: EVENTO E CONTAGEM (Fundo Verde Suave para destacar) */
+/* ============================================================
+   2. SEGUNDA SEÇÃO: EVENTO E CONTAGEM (Fundo Verde Suave)
+   ============================================================ */
 #evento-detalhes {
-    background-color: #f0f3ef; /* A cor que divide o site */
+    background-color: #f0f3ef; /* Cor de destaque para separar as seções */
     padding: 80px 20px;
-    text-align: center;
     border-top: 1px solid #cfd8cc;
     border-bottom: 1px solid #cfd8cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante que tudo dentro da seção fique no meio */
 }
 
+/* Título centralizado */
 #status-evento {
     color: #6f7f6b;
     font-size: 2rem;
     margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
 }
 
-/* Timer */
+/* Timer / Contador */
 #timer {
     display: flex;
     justify-content: center;
@@ -73,7 +92,7 @@ h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; }
 .tempo-box span { display: block; font-size: 1.8rem; color: #6f7f6b; font-weight: bold; }
 .tempo-box small { color: #b8a46a; text-transform: uppercase; font-size: 0.7rem; }
 
-/* Dois Endereços Lado a Lado */
+/* Bloco de endereços (Cerimônia e Festa lado a lado) */
 .duas-colunas {
     display: flex;
     justify-content: center;
@@ -90,13 +109,17 @@ h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; }
     background: #ffffff;
     padding: 30px;
     border: 1px solid #cfd8cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza textos dentro do card de endereço */
 }
 
-/* 5. SEÇÃO: NOSSA HISTÓRIA */
+/* ============================================================
+   3. TERCEIRA SEÇÃO: NOSSA HISTÓRIA
+   ============================================================ */
 .story-section {
-    background: #fdfdfb; /* Volta para a cor clara */
+    background: #fdfdfb; 
     padding: 100px 20px;
-    text-align: center;
 }
 
 .story-text {
@@ -105,6 +128,7 @@ h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; }
     line-height: 1.8;
 }
 
+/* Grade de fotos e vídeos */
 .story-media {
     max-width: 1000px;
     margin: 0 auto;
@@ -121,11 +145,12 @@ h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; }
     border: 1px solid #e2e6df;
 }
 
-/* 6. LISTA DE PRESENTES */
+/* ============================================================
+   4. QUARTA SEÇÃO: LISTA DE PRESENTES
+   ============================================================ */
 .gifts-section {
     background: #ffffff;
     padding: 80px 20px;
-    text-align: center;
 }
 
 .gifts {
@@ -140,11 +165,19 @@ h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; }
     border: 1px solid #cfd8cc;
     padding: 30px;
     transition: 0.3s;
+    background: #fff;
 }
 
-.gift-card:hover { transform: translateY(-5px); border-color: #b8a46a; }
+.gift-card:hover { 
+    transform: translateY(-5px); 
+    border-color: #b8a46a; 
+}
 
-/* 7. BOTÕES */
+/* ============================================================
+   5. COMPONENTES REUTILIZÁVEIS (Botões e Divisores)
+   ============================================================ */
+
+/* Botão padrão do site */
 .btn-more, .gift-card button {
     display: inline-block;
     text-decoration: none;
@@ -158,6 +191,7 @@ h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; }
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 1px;
+    margin-top: 15px;
 }
 
 .btn-more:hover, .gift-card button:hover {
@@ -165,7 +199,7 @@ h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; }
     color: #fff;
 }
 
-/* 8. DIVISORES (Flor de Liz) */
+/* Divisor decorativo Flor de Liz */
 .divisor-fleur-de-lis {
     display: flex;
     align-items: center;
@@ -174,7 +208,8 @@ h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; }
     width: 80%;
 }
 
-.divisor-fleur-de-lis::before, .divisor-fleur-de-lis::after {
+.divisor-fleur-de-lis::before, 
+.divisor-fleur-de-lis::after {
     content: "";
     flex: 1;
     height: 1px;
@@ -183,7 +218,16 @@ h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; }
 
 .divisor-fleur-de-lis::after { background: linear-gradient(to left, transparent, #b8a46a); }
 
-.divisor-fleur-de-lis .icon { color: #b8a46a; padding: 0 15px; font-size: 24px; }
+.divisor-fleur-de-lis .icon { 
+    color: #b8a46a; 
+    padding: 0 15px; 
+    font-size: 24px; 
+}
 
-/* 9. FOOTER */
-footer { padding: 60px 20px; text-align: center; background: #f0f3ef; }
+/* ============================================================
+   6. RODAPÉ (Footer)
+   ============================================================ */
+footer { 
+    padding: 60px 20px; 
+    background: #f0f3ef; /* Mesma cor da seção de evento para fechar o design */
+}
