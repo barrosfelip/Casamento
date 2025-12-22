@@ -25,7 +25,7 @@ body {
 } 
 
 /* ============================================================
-   1. PRIMEIRA SEÇÃO: HERO (Abertura / Save the Date)
+   1. PRIMEIRA SEÇÃO: HERO (Ajuste de Espaçamentos)
    ============================================================ */
 .hero {
     min-height: 100vh;
@@ -41,16 +41,75 @@ body {
 .card {
     background: rgba(255, 255, 255, 0.93);
     border: 1px solid #cfd8cc;
-    max-width: 420px;
+    max-width: 450px; /* Aumentei um pouco a largura para o texto respirar */
     width: 100%;
-    padding: 40px 25px;
+    padding: 60px 35px; /* Mais preenchimento interno */
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.save { text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; color: #8c9b88; } 
-h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; } 
-.amp { font-size: 1.5rem; color: #b8a46a; } 
+/* Espaço abaixo do "Save the Date" e "Casamento" */
+.save { 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-size: 0.75rem; 
+    color: #8c9b88; 
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Espaço entre "Casamento" e o primeiro nome */
+.script { 
+    font-family: 'Great Vibes', cursive; 
+    font-size: 2.2rem; 
+    color: #b8a46a; 
+    margin-bottom: 25px; /* Espaço aumentado aqui */
+    display: block; 
+} 
+
+/* Espaço entre os nomes dos noivos e o texto de convite */
+h1 { 
+    font-size: 2.6rem; 
+    color: #6f7f6b; 
+    font-weight: 400; 
+    margin: 10px 0; /* Espaço entre Felipe & Maria Tereza */
+} 
+
+.amp { font-size: 1.8rem; color: #b8a46a; display: block; margin: 5px 0; }
+
+/* Espaço para o parágrafo de introdução */
+.text { 
+    margin: 35px 0; /* Aumenta o espaço em cima e embaixo do texto */
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+} 
+
+/* Espaço para o bloco de Data e Hora */
+.info { 
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0; /* Mais distância entre o texto e a data */
+    padding: 20px 0;
+    border-top: 1px solid #eee; /* Linhas sutis para destacar a data */
+    border-bottom: 1px solid #eee;
+} 
+
+.info strong { font-size: 1.6rem; color: #6f7f6b; display: block; }
+.info span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Espaço para o Local */
+.local { 
+    margin-top: 30px; /* Distância final para o local no rodapé do card */
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.local strong {
+    color: #6f7f6b;
+    display: block;
+    margin-bottom: 5px;
+}
 
 /* ============================================================
    2. SEGUNDA SEÇÃO: EVENTO E CONTAGEM (Fundo Verde Suave)
@@ -231,3 +290,4 @@ footer {
     padding: 60px 20px; 
     background: #f0f3ef; /* Mesma cor da seção de evento para fechar o design */
 }
+
