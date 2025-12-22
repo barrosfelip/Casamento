@@ -5,8 +5,8 @@
  } 
 
 body { 
- background: linear-gradient(180deg, #f4f7f3, #eef3ed);
- font-family: 'Playfair Display', serif;
+background: linear-gradient(180deg, #e9f0e8, #dfe7de);
+font-family: 'Playfair Display', serif;
  color: #5a5a5a;
  } 
 
@@ -382,6 +382,7 @@ footer { padding: 30px 15px;
 .divisor-fleur-de-lis .icon {
     color: #b8a46a;
 }
+
 
 
 
