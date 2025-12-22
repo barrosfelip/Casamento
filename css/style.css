@@ -1,332 +1,61 @@
-*{ 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- } 
+/* 1. CONFIGURAÇÕES GERAIS */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
 
 body { 
-background: linear-gradient(180deg, #e9f0e8, #dfe7de);
-font-family: 'Playfair Display', serif;
- color: #5a5a5a;
- } 
+    background-color: #fdfdfb; /* Um off-white bem leve para o fundo geral */
+    font-family: 'Playfair Display', serif;
+    color: #5a5a5a;
+    overflow-x: hidden;
+} 
 
-/* HERO */
-/*.hero {
-  padding: 60px 15px;
-  display: flex;
-  justify-content: center;
-}*/
-
+/* 2. HERO (Topo com a imagem do casal) */
 .hero {
-  min-height: 100vh; /* ocupa 1 tela inteira */
-  
-  background-image: url("../assets/fundo.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 80px 15px;
+    min-height: 100vh;
+    background-image: url("../assets/fundo.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
 }
 
 .card {
-  background: #ffffffee;
-  border: 1px solid #cfd8cc;
-  max-width: 420px;
-  width: 100%;
-  padding: 40px 25px;
-  text-align: center;
-}
-
-/* TEXTOS */ 
-.save { 
- text-transform: uppercase;
- letter-spacing: 2px;
- font-size: 0.75rem;
- color: #8c9b88;
- } 
-.script { 
- font-family: 'Great Vibes', cursive;
- font-size: 2rem;
- color: #b8a46a;
- display: block;
- margin-bottom: 10px;
- } 
-h1 { 
- font-size: 2.4rem;
- color: #6f7f6b;
- } 
-.amp { 
- font-size: 1.5rem;
- color: #b8a46a;
- } 
-.text { 
- margin: 20px 0;
- font-size: 0.95rem;
- } 
-
-/* INFO */ 
-.info { 
- display: flex;
- justify-content: space-around;
- margin: 20px 0;
- } 
-.info strong { 
- font-size: 1.4rem;
- color: #6f7f6b;
- } 
-.info span { 
- display: block;
- font-size: 0.75rem;
- } 
-/* LOCAL */ 
-.local { 
- font-size: 0.85rem;
- margin-top: 10px;
- } 
-
-/* PRESENTES */ 
-.gifts-section {
-  background: #ffffff;
-  padding: 80px 20px;
-  text-align: center;
-  box-shadow: 0 -20px 40px rgba(0,0,0,0.03);
-}
-.gifts-section h2 { 
- color: #6f7f6b;
- margin-bottom: 10px;
- } 
-.subtitle { 
- font-size: 0.9rem;
- margin-bottom: 25px;
- } 
-.gifts { 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 900px;
-  margin: 40px auto 0;
-}
-
-.gift-card { 
- background: #fff;
- border: 1px solid #e2e6df;
- padding: 20px;
- } 
-.gift-card h3 { 
- margin-bottom: 10px;
- } 
-.gift-card span { 
- display: block;
- font-weight: bold;
- margin-bottom: 10px;
- } 
-.gift-card button { 
- background: #b8a46a;
- color: #fff;
- border: none;
- padding: 10px 15px;
- cursor: pointer;
- } 
-.gift-card button:hover { 
- background: #a08f5c;
- } 
-
-/* FOOTER */ 
-footer { padding: 30px 15px;
- text-align: center;
- background: #fff;
- margin-top: 40px;
- } 
-
-.more-gifts { 
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
- } 
-.more-gifts .btn-more {
-  text-decoration: none;
-  padding: 14px 28px;
-  border: 2px solid #b8a46a;
-  color: #b8a46a;
-  border-radius: 30px;
-  transition: 0.3s;
-}
-.more-gifts .btn-more:hover { 
- background: #b8a46a;
- color: #ffffff;
-}
-.btn-gift { 
- display: inline-block;
- margin-top: 15px;
- padding: 12px 26px;
- font-family: 'Playfair Display', serif;
- font-size: 15px;
- background: #b8a46a;
- color: #ffffff;
- border-radius: 30px;
- text-decoration: none;
- border: none;
- cursor: pointer;
- transition: all 0.3s ease;
- } 
- .btn-gift:hover { 
-  background: #9f8c55;
- } 
-}
-
-/* HISTÓRIA DO CASAL */
-.story-section {
-  background: #f4f7f3;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.story-section h2 {
-  font-size: 2.2rem;
-  color: #6f7f6b;
-  margin-bottom: 30px;
-}
-
-.story-text {
-  max-width: 750px;
-  margin: 0 auto 60px;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #5a5a5a;
-}
-
-.story-media {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  align-items: center;
-}
-
-.story-media img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid #e2e6df;
-}
-
-.story-media video {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid #e2e6df;
-  grid-column: span 2;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .story-media video {
-    grid-column: span 1;
-  }
-}
-
-/* DIVISÂO SECÇÃO*/
-
-.divisor-fleur-de-lis {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto;
-    width: 90%;
-    max-width: 500px;
-    clear: both; /* Garante que não haja interferência de fotos flutuando */
-}
-
-.divisor-fleur-de-lis::before,
-.divisor-fleur-de-lis::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #d4af37);
-}
-
-.divisor-fleur-de-lis::after {
-    background: linear-gradient(to left, transparent, #d4af37);
-}
-
-.divisor-fleur-de-lis .icon {
-    color: #d4af37;
-    font-size: 32px; /* Aumentei um pouco para dar destaque */
-    padding: 0 15px;
-    line-height: 1;
-    display: inline-block;
-    font-family: "Times New Roman", serif; /* Fontes serifadas desenham melhor esse símbolo */
-}
-
-
-#nossa-historia {
-    padding: 60px 0; /* Espaço entre as seções */
-    background-color: #1a1a1a; /* Cor de fundo do seu site */
-}
-
-.container-historia {
-    width: 90%; /* Largura para telas menores */
-    max-width: 800px; /* Impede que o texto fique "esticado" e desalinhado no PC */
-    margin: 0 auto; /* Centraliza o bloco inteiro na tela */
-    padding: 0 20px; /* Garante que o texto não encoste na borda do celular */
-    box-sizing: border-box;
-}
-
-#nossa-historia h2 {
+    background: rgba(255, 255, 255, 0.93);
+    border: 1px solid #cfd8cc;
+    max-width: 420px;
+    width: 100%;
+    padding: 40px 25px;
     text-align: center;
-    color: #d4af37;
-    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-#nossa-historia p {
-    text-align: center; /* Mantém o texto alinhado com o título */
-    line-height: 1.8; /* Melhora a leitura */
-    color: #ffffff;
-    margin-bottom: 20px;
-}
+/* 3. TEXTOS GERAIS */
+.save { text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; color: #8c9b88; } 
+.script { font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #b8a46a; margin-bottom: 10px; display: block; } 
+h1 { font-size: 2.4rem; color: #6f7f6b; font-weight: 400; } 
+.amp { font-size: 1.5rem; color: #b8a46a; } 
 
-/* Ajuste para as fotos da seção */
-.container-historia img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-
-
-
-/* data do evento */
-/* AJUSTE NA SEÇÃO DE EVENTO - PADRÃO BEGE */
-/*#evento-detalhes {
-    background: linear-gradient(180deg, #f4f7f3, #eef3ed); /* Mesmo fundo do seu body */
+/* 4. SEÇÃO: EVENTO E CONTAGEM (Fundo Verde Suave para destacar) */
+#evento-detalhes {
+    background-color: #f0f3ef; /* A cor que divide o site */
     padding: 80px 20px;
     text-align: center;
-    color: #5a5a5a;
-}*/
-
-#evento-detalhes {
-    background-color: #f0f3ef; /* Um verde mineral bem clarinho */
     border-top: 1px solid #cfd8cc;
     border-bottom: 1px solid #cfd8cc;
 }
 
 #status-evento {
-    font-family: 'Playfair Display', serif;
-    color: #6f7f6b; /* Seu verde padrão */
+    color: #6f7f6b;
     font-size: 2rem;
     margin-bottom: 30px;
 }
 
-/* Timer seguindo o estilo dos seus cards */
+/* Timer */
 #timer {
     display: flex;
     justify-content: center;
@@ -338,79 +67,123 @@ footer { padding: 30px 15px;
     padding: 15px;
     min-width: 75px;
     background: #ffffff;
-    border: 1px solid #cfd8cc; /* Sua borda padrão */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    border: 1px solid #cfd8cc;
 }
 
-.tempo-box span {
-    display: block;
-    font-size: 1.8rem;
-    color: #6f7f6b; /* Seu verde */
-    font-weight: bold;
-}
+.tempo-box span { display: block; font-size: 1.8rem; color: #6f7f6b; font-weight: bold; }
+.tempo-box small { color: #b8a46a; text-transform: uppercase; font-size: 0.7rem; }
 
-.tempo-box small {
-    color: #b8a46a; /* Seu dourado */
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-}
-
-/* Informações do Local */
-.info-container {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.info-item p {
-    font-size: 1rem;
-    color: #5a5a5a;
-    margin: 5px 0;
-}
-
-.info-item strong {
-    color: #6f7f6b;
-}
-
-/* Reutilizando sua classe de botão para o mapa */
-#evento-detalhes .btn-more {
-    margin-top: 20px;
-    display: inline-block;
-}
-
-/* Correção da Flor de Liz no fundo claro */
-.divisor-fleur-de-lis {
-    margin-bottom: 40px;
-}
-.divisor-fleur-de-lis::before, .divisor-fleur-de-lis::after {
-    background: linear-gradient(to right, transparent, #b8a46a); /* Seu dourado */
-}
-.divisor-fleur-de-lis .icon {
-    color: #b8a46a;
-}
-
-/* Isso organiza os itens que você já estilizou */
+/* Dois Endereços Lado a Lado */
 .duas-colunas {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Espaço entre os dois endereços */
-    flex-wrap: wrap; /* Para um ficar sob o outro no celular */
-    margin-top: 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Ajuste fino para os itens não ficarem colados */
 .info-item {
     flex: 1;
-    min-width: 280px; /* Largura mínima para não amassar o texto */
+    min-width: 280px;
     max-width: 450px;
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #cfd8cc;
 }
 
-/* Garante que o botão tenha um respiro */
-.btn-more {
-    margin-top: 15px;
+/* 5. SEÇÃO: NOSSA HISTÓRIA */
+.story-section {
+    background: #fdfdfb; /* Volta para a cor clara */
+    padding: 100px 20px;
+    text-align: center;
 }
 
+.story-text {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
 
+.story-media {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
+.story-media img, .story-media video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #e2e6df;
+}
 
+/* 6. LISTA DE PRESENTES */
+.gifts-section {
+    background: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+}
 
+.gifts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.gift-card {
+    border: 1px solid #cfd8cc;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.gift-card:hover { transform: translateY(-5px); border-color: #b8a46a; }
+
+/* 7. BOTÕES */
+.btn-more, .gift-card button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 25px;
+    border: 1px solid #b8a46a;
+    background: transparent;
+    color: #b8a46a;
+    border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.btn-more:hover, .gift-card button:hover {
+    background: #b8a46a;
+    color: #fff;
+}
+
+/* 8. DIVISORES (Flor de Liz) */
+.divisor-fleur-de-lis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.divisor-fleur-de-lis::before, .divisor-fleur-de-lis::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #b8a46a);
+}
+
+.divisor-fleur-de-lis::after { background: linear-gradient(to left, transparent, #b8a46a); }
+
+.divisor-fleur-de-lis .icon { color: #b8a46a; padding: 0 15px; font-size: 24px; }
+
+/* 9. FOOTER */
+footer { padding: 60px 20px; text-align: center; background: #f0f3ef; }
