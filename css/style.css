@@ -79,7 +79,7 @@ h1 {
 
 /* Espaço para o parágrafo de introdução */
 .text { 
-    margin: 10 px 0; /* Aumenta o espaço em cima e embaixo do texto */
+    margin: 25 px 0; /* Aumenta o espaço em cima e embaixo do texto */
     font-size: 1rem;
     line-height: 1.6;
     font-style: italic;
@@ -89,7 +89,7 @@ h1 {
 .info { 
     display: flex;
     justify-content: space-around;
-    margin: 40px 0; /* Mais distância entre o texto e a data */
+    margin: 30px 0; /* Mais distância entre o texto e a data */
     padding: 20px 0;
     border-top: 1px solid #eee; /* Linhas sutis para destacar a data */
     border-bottom: 1px solid #eee;
@@ -102,7 +102,7 @@ h1 {
 .local { 
     margin-top: 30px; /* Distância final para o local no rodapé do card */
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.0;
 }
 
 .local strong {
@@ -290,6 +290,7 @@ footer {
     padding: 60px 20px; 
     background: #f0f3ef; /* Mesma cor da seção de evento para fechar o design */
 }
+
 
 
 
