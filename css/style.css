@@ -306,11 +306,17 @@ footer { padding: 30px 15px;
 
 /* data do evento */
 /* AJUSTE NA SEÇÃO DE EVENTO - PADRÃO BEGE */
-#evento-detalhes {
+/*#evento-detalhes {
     background: linear-gradient(180deg, #f4f7f3, #eef3ed); /* Mesmo fundo do seu body */
     padding: 80px 20px;
     text-align: center;
     color: #5a5a5a;
+}*/
+
+#evento-detalhes {
+    background-color: #f0f3ef; /* Um verde mineral bem clarinho */
+    border-top: 1px solid #cfd8cc;
+    border-bottom: 1px solid #cfd8cc;
 }
 
 #status-evento {
@@ -403,6 +409,7 @@ footer { padding: 30px 15px;
 .btn-more {
     margin-top: 15px;
 }
+
 
 
 
