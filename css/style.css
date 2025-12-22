@@ -383,6 +383,27 @@ footer { padding: 30px 15px;
     color: #b8a46a;
 }
 
+/* Isso organiza os itens que você já estilizou */
+.duas-colunas {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaço entre os dois endereços */
+    flex-wrap: wrap; /* Para um ficar sob o outro no celular */
+    margin-top: 30px;
+}
+
+/* Ajuste fino para os itens não ficarem colados */
+.info-item {
+    flex: 1;
+    min-width: 280px; /* Largura mínima para não amassar o texto */
+    max-width: 450px;
+}
+
+/* Garante que o botão tenha um respiro */
+.btn-more {
+    margin-top: 15px;
+}
+
 
 
 
