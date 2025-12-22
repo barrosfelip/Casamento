@@ -72,7 +72,7 @@ h1 {
     font-size: 2.6rem; 
     color: #6f7f6b; 
     font-weight: 400; 
-    margin: 10px 0; /* Espaço entre Felipe & Maria Tereza */
+    margin: 5px 0; /* Espaço entre Felipe & Maria Tereza */
 } 
 
 .amp { font-size: 1.8rem; color: #b8a46a; display: block; margin: 5px 0; }
@@ -290,4 +290,5 @@ footer {
     padding: 60px 20px; 
     background: #f0f3ef; /* Mesma cor da seção de evento para fechar o design */
 }
+
 
