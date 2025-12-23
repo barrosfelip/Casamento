@@ -12,15 +12,14 @@ function pagar(valor) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Defina a data aqui (Ano, Mês - 1, Dia, Hora, Minuto)
-    // Nota: Janeiro é 0, Outubro é 9.
+    // Ajuste a data do seu evento aqui
+    // Formato: Ano, Mês (0-11), Dia, Hora, Minuto
     const dataEvento = new Date(2025, 9, 10, 17, 0, 0).getTime();
 
     function atualizarContador() {
         const agora = new Date().getTime();
         const distancia = dataEvento - agora;
 
-        // IDs dos elementos
         const elDias = document.getElementById("dias");
         const elHoras = document.getElementById("horas");
         const elMinutos = document.getElementById("minutos");
@@ -28,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const elStatus = document.getElementById("status-evento");
         const elTimer = document.getElementById("timer");
 
-        // Verifica se os elementos existem na página antes de tentar escrever neles
+        // Se o elemento não existir na página, para a execução para não dar erro
         if (!elDias) return;
 
         if (distancia > 0) {
@@ -37,22 +36,23 @@ document.addEventListener("DOMContentLoaded", function() {
             const m = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
             const s = Math.floor((distancia % (1000 * 60)) / 1000);
 
-            elDias.innerText = d < 10 ? "0" + d : d;
-            elHoras.innerText = h < 10 ? "0" + h : h;
-            elMinutos.innerText = m < 10 ? "0" + m : m;
-            elSegundos.innerText = s < 10 ? "0" + s : s;
+            elDias.innerText = d.toString().padStart(2, '0');
+            elHoras.innerText = h.toString().padStart(2, '0');
+            elMinutos.innerText = m.toString().padStart(2, '0');
+            elSegundos.innerText = s.toString().padStart(2, '0');
         } else {
-            // Lógica para quando chegar o dia
-            if (distancia > -86400000) { // Nas primeiras 24 horas
+            // Lógica para quando o tempo acabar
+            if (distancia > -86400000) { 
                 elStatus.innerText = "É HOJE!!! ❤️";
             } else {
                 elStatus.innerText = "Já nos casamos! 💍";
             }
             if (elTimer) elTimer.style.display = "none";
+            clearInterval(intervalo); // Para o contador
         }
     }
 
-    // Executa imediatamente e depois a cada 1 segundo
-    atualizarContador();
-    setInterval(atualizarContador, 1000);
+    // Inicia o intervalo e guarda a referência para poder pará-lo depois
+    const intervalo = setInterval(atualizarContador, 1000);
+    atualizarContador(); // Chama uma vez imediato para não exibir 00 ao carregar
 });
