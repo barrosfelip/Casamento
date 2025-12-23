@@ -11,15 +11,17 @@ function pagar(valor) {
   );
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Ajuste a data do seu evento aqui
-    // Formato: Ano, Mês (0-11), Dia, Hora, Minuto
+// Função para o contador regressivo
+function iniciarContador() {
+    // Defina a data do evento: Ano, Mês (0-11), Dia, Hora, Minuto
+    // Outubro é mês 9 no JavaScript
     const dataEvento = new Date(2025, 9, 10, 17, 0, 0).getTime();
 
-    function atualizarContador() {
+    const atualizar = () => {
         const agora = new Date().getTime();
         const distancia = dataEvento - agora;
 
+        // Selecionando os elementos
         const elDias = document.getElementById("dias");
         const elHoras = document.getElementById("horas");
         const elMinutos = document.getElementById("minutos");
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const elStatus = document.getElementById("status-evento");
         const elTimer = document.getElementById("timer");
 
-        // Se o elemento não existir na página, para a execução para não dar erro
+        // Se os elementos não existirem na página, interrompe a função
         if (!elDias) return;
 
         if (distancia > 0) {
@@ -36,23 +38,34 @@ document.addEventListener("DOMContentLoaded", function() {
             const m = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
             const s = Math.floor((distancia % (1000 * 60)) / 1000);
 
-            elDias.innerText = d.toString().padStart(2, '0');
-            elHoras.innerText = h.toString().padStart(2, '0');
-            elMinutos.innerText = m.toString().padStart(2, '0');
-            elSegundos.innerText = s.toString().padStart(2, '0');
+            elDias.textContent = d.toString().padStart(2, '0');
+            elHoras.textContent = h.toString().padStart(2, '0');
+            elMinutos.textContent = m.toString().padStart(2, '0');
+            elSegundos.textContent = s.toString().padStart(2, '0');
         } else {
-            // Lógica para quando o tempo acabar
             if (distancia > -86400000) { 
-                elStatus.innerText = "É HOJE!!! ❤️";
+                if (elStatus) elStatus.textContent = "É HOJE!!! ❤️";
             } else {
-                elStatus.innerText = "Já nos casamos! 💍";
+                if (elStatus) elStatus.textContent = "Já nos casamos! 💍";
             }
             if (elTimer) elTimer.style.display = "none";
-            clearInterval(intervalo); // Para o contador
         }
-    }
+    };
 
-    // Inicia o intervalo e guarda a referência para poder pará-lo depois
-    const intervalo = setInterval(atualizarContador, 1000);
-    atualizarContador(); // Chama uma vez imediato para não exibir 00 ao carregar
-});
+    // Atualiza a cada segundo
+    setInterval(atualizar, 1000);
+    atualizar(); // Chama uma vez para não começar zerado
+}
+
+// Garante que o script rode após o HTML carregar
+if (document.readyState === "complete" || document.readyState === "interactive") {
+    iniciarContador();
+} else {
+    document.addEventListener("DOMContentLoaded", iniciarContador);
+}
+
+// Função dos botões de presente (Pix)
+function pagar(valor) {
+    alert("Valor selecionado: R$ " + valor.toFixed(2) + "\n\nEm breve você poderá pagar via Pix, Cartão ou Boleto 💳");
+}
+
