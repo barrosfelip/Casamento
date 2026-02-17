@@ -1,80 +1,172 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><script src="script.js"></script>
+<html lang="pt-BR">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Casamento</title>
- <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Felipe & Tereza 💍</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
- <!-- HERO / CAPA -->
- <header class="hero">
-  <div class="hero-inner container">
-   <p class="save">SAVE THE DATE</p>
-   <h1 class="script">Felipe &amp; Parceira</h1>
-   <p class="date">15 de agosto de 2026</p>
-   <button class="btn btn-primary btn-outline">Ver mais</button>
+  <section class="hero">
+    <div class="card">
+      <span class="save">Save the Date</span>
+      <span class="script">Casamento</span>
+
+      <h1 class="nomes-casal">
+        Felipe <span class="amp">&</span> Maria Tereza
+      </h1>
+
+      <p class="text">
+        É com grande alegria e emoção que convidamos vocês para celebrar conosco
+        o dia mais especial de nossas vidas.
+      </p>
+
+      <div class="info">
+        <div>
+          <strong>10</strong>
+          <span>Outubro</span>
+        </div>
+        <div>
+          <strong>17h</strong>
+          <span>Horário</span>
+        </div>
+      </div>
+
+      <p class="local">
+      <strong>Salão de Festas Borcelle</strong>
+      Rua Alegre, 123 – Olivedos - PB
+      </p>
+    </div>
+  </section>
+
+<section id="evento-detalhes">
+    <div class="divisor-fleur-de-lis">
+        <span class="icon">⚜</span>
+    </div>  
+
+    <div class="container-regressiva">
+        <h2 id="status-evento">Faltam apenas:</h2>
+
+        <div id="timer">
+            <div class="tempo-box">
+                <span id="dias">00</span>
+                <small>Dias</small>
+            </div>
+            <div class="tempo-box">
+                <span id="horas">00</span>
+                <small>Horas</small>
+            </div>
+            <div class="tempo-box">
+                <span id="minutos">00</span>
+                <small>Min</small>
+            </div>
+            <div class="tempo-box">
+                <span id="segundos">00</span>
+                <small>Seg</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="duas-colunas">
+        <div class="info-item">
+            <span class="script">Cerimônia Religiosa</span>
+            <p><strong>Igreja Matriz de Olivedos</strong></p>
+            <p class="local">Praça Central, S/N – Centro</p>
+            <a href="#" target="_blank" class="btn-more">VER NO MAPA</a>
+        </div>
+
+        <div class="info-item">
+            <span class="script">Recepção e Festa</span>
+            <p>Logo após a cerimônia</p>
+            <p><strong>Salão de Festas Borcelle</strong></p>
+            <p class="local">Rua Alegre, 123 – Olivedos - PB</p>
+            <a href="#" target="_blank" class="btn-more">VER NO MAPA</a>
+        </div>
+    </div>
+</section>
+
+<!-- HISTÓRIA DO CASAL -->
+<section class="story-section">
+<div class="container-historia">
+  <h2>Nossa História</h2>
+
+  <p class="story-text">
+    Nossa história começou de forma simples, mas cheia de significado.
+    Nos conhecemos em um Encontro de Jovens com Cristo, unidos pela fé,
+    pela amizade e pelo desejo de viver o amor com propósito.
+    <br><br>
+    Somos católicos, acreditamos no amor construído dia após dia,
+    na presença de Deus em cada passo e no cuidado mútuo como base
+    do nosso relacionamento.
+    <br><br>
+    Juntos, colecionamos momentos inesquecíveis em nossas viagens.
+    João Pessoa, Salvador, São Paulo e Gramado fazem parte da nossa história.
+    Foi em Gramado, em meio ao frio, ao carinho e aos sonhos compartilhados,
+    que demos um dos passos mais importantes: o nosso noivado.
+    <br><br>
+    Hoje seguimos de mãos dadas, certos de que o amor cresce quando
+    é vivido com fé, respeito e entrega.
+  </p>
+
+  <div class="story-media">
+
+    <img src="assets/img1.jpg" alt="Foto do casal 1">
+    <img src="assets/img2.jpg" alt="Foto do casal 2">
+    <img src="assets/img3.jpg" alt="Foto do casal 3">
+    <img src="assets/img4.jpg" alt="Foto do casal 4">
+
+    <video controls>
+      <source src="assets/vid1.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
   </div>
- </header>
+</section>
 
- <!-- EVENTO -->
- <section class="section section-event" id="evento-detalhes">
-  <div class="container">
-   <h2 class="section-title">O Evento</h2>
-   <p class="section-text">Local: Igreja &amp; Salão de Festas</p>
-   <div class="countdown grid">
-    <div class="tempo-box">
-     <span>10</span><small>dias</small>
+<div class="divisor-fleur-de-lis">
+    <span class="icon">⚜</span>
+</div>  
+  <section class="gifts-section">
+    <h2>Lista de Presentes</h2>
+    <p class="subtitle">
+      Escolha um presente simbólico para nos presentear 💛
+    </p>
+
+    <div class="gifts">
+      <div class="gift-card">
+        <h3>Lua de Mel 🌿</h3>
+        <span>R$ 300,00</span>
+        <button>Presentear</button>
+      </div>
+
+      <div class="gift-card">
+        <h3>Jantar Especial 🍷</h3>
+        <span>R$ 150,00</span>
+        <button>Presentear</button>
+      </div>
+
+      <div class="gift-card">
+        <h3>Novo Lar 🏡</h3>
+        <span>R$ 250,00</span>
+        <button>Presentear</button>
+      </div>
     </div>
-    <div class="tempo-box">
-     <span>12</span><small>hrs</small>
-    </div>
-    <div class="tempo-box">
-     <span>30</span><small>min</small>
-    </div>
-   </div>
+      <div class="more-gifts">
+    <a href="presente.html" class="btn-more">
+      Ver mais presentes 🎁
+    </a>
   </div>
- </section>
+  </section>
 
- <!-- NOSSA HISTÓRIA -->
- <section class="section section-story">
-  <div class="container">
-   <h2 class="section-title">Nossa História</h2>
-   <div class="grid story-grid">
-    <div class="card card-story">
-     <img src="assets/story1.jpg" alt="Foto 1">
-     <p>Primeiro encontro inesquecível</p>
-    </div>
-    <div class="card card-story">
-     <img src="assets/story2.jpg" alt="Foto 2">
-     <p>Viagens e momentos felizes</p>
-    </div>
-   </div>
-  </div>
- </section>
-
- <!-- PRESENTES -->
- <section class="section section-gifts">
-  <div class="container">
-   <h2 class="section-title">Lista de Presentes</h2>
-   <div class="grid gifts-grid">
-    <div class="card card-gift">
-     <p>Contribuição Lua de Mel</p>
-     <button class="btn btn-primary">Contribuir</button>
-    </div>
-    <div class="card card-gift">
-     <p>Itens para casa</p>
-     <button class="btn btn-primary">Ver mais</button>
-    </div>
-   </div>
-  </div>
- </section>
-
- <!-- RODAPÉ -->
- <footer class="footer">
-  <p>Feito com ❤️ para vocês</p>
- </footer>
-
+  <footer>
+    <p>Com carinho,</p>
+    <strong>Felipe & Maria Tereza ❤️</strong>
+  </footer>
+<script src="script.js"></script>
 </body>
 </html>
