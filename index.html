@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
   <title>Felipe & Tereza 💍</title>
 
   <!-- Google Fonts -->
@@ -12,6 +12,23 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+
+
+<!--div id="entrada" class="entrada">
+  <div class="entrada__card">
+    <p class="eyebrow">Bem-vindo ao nosso convite</p>
+    <h2 class="entrada__titulo">Felipe &amp;</h2>
+    <h2 class="entrada__titulo">Maria Tereza</h2>
+    <p class="entrada__texto">Clique para iniciar</p>
+
+    <button id="btnEntrar" class="btn-more" type="button">
+      💍 Entrar
+    </button>
+  </div>
+</div-->
+
+
 
   <section class="hero">
     <div class="card">
@@ -29,8 +46,8 @@
 
       <div class="info">
         <div>
-          <strong>10</strong>
-          <span>Outubro</span>
+          <strong>7</strong>
+          <span>Novembro</span>
         </div>
         <div>
           <strong>17h</strong>
@@ -38,17 +55,16 @@
         </div>
       </div>
 
-      <p class="local">
-      <strong>Salão de Festas Borcelle</strong>
-      Rua Alegre, 123 – Olivedos - PB
-      </p>
+      <p class="localT">
+      <strong>Igreja Matriz de São Sebastião</strong></p>
+      <p>Centro – Olivedos - PB</p>
     </div>
   </section>
 
 <section id="evento-detalhes">
-    <div class="divisor-fleur-de-lis">
+    <!--div class="divisor-fleur-de-lis">
         <span class="icon">⚜</span>
-    </div>  
+    </div-->  
 
     <div class="container-regressiva">
         <h2 id="status-evento">Faltam apenas:</h2>
@@ -75,21 +91,28 @@
 
     <div class="duas-colunas">
         <div class="info-item">
-            <span class="script">Cerimônia Religiosa</span>
+            <span class="script2">Cerimônia Religiosa</span>
+            <p>07 de novembro de 2026</p>
+            <p>17 horas</p>
             <p><strong>Igreja Matriz de Olivedos</strong></p>
             <p class="local">Praça Central, S/N – Centro</p>
-            <a href="#" target="_blank" class="btn-more">VER NO MAPA</a>
+            <a href="https://maps.app.goo.gl/twxwPauRsdvnn2fs9" target="_blank" class="btn-more">VER NO MAPA</a>
         </div>
 
         <div class="info-item">
-            <span class="script">Recepção e Festa</span>
+            <span class="script2">Recepção e Festa</span>
             <p>Logo após a cerimônia</p>
-            <p><strong>Salão de Festas Borcelle</strong></p>
-            <p class="local">Rua Alegre, 123 – Olivedos - PB</p>
-            <a href="#" target="_blank" class="btn-more">VER NO MAPA</a>
+            <p><strong>Clube municipal</strong></p>
+            <p class="local">Rua Oscar Costa, S/N</p>
+            <p>Centro – Olivedos - PB</p>
+            <a href="https://maps.app.goo.gl/RZcud1oRB8dLHPgU8" target="_blank" class="btn-more">VER NO MAPA</a>
         </div>
     </div>
+    <div class="divisor-fleur-de-lis">
+    <span class="icon">⚜</span>
+    </div>  
 </section>
+
 
 <!-- HISTÓRIA DO CASAL -->
 <section class="story-section">
@@ -122,15 +145,17 @@
     <img src="assets/img4.jpg" alt="Foto do casal 4">
 
     <video controls>
-      <source src="assets/vid1.mp4" type="video/mp4">
+      <source src="assets/Aviao.mp4" type="video/mp4">
       Seu navegador não suporta vídeo.
     </video>
+    
   </div>
-</section>
-
-<div class="divisor-fleur-de-lis">
+  <div class="divisor-fleur-de-lis">
     <span class="icon">⚜</span>
 </div>  
+</section>
+
+
   <section class="gifts-section">
     <h2>Lista de Presentes</h2>
     <p class="subtitle">
@@ -167,6 +192,17 @@
     <p>Com carinho,</p>
     <strong>Felipe & Maria Tereza ❤️</strong>
   </footer>
-<script src="script.js"></script>
+
+<audio id="musica" loop>
+  <source src="assets/musica.mp3" type="audio/mpeg">
+</audio>
+
+<button id="btnMusica" class="btn btn--outline" type="button">
+  🔊 Música
+</button>
+
+
+
+<script src="js/script.js"></script>
 </body>
 </html>
