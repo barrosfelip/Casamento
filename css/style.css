@@ -207,10 +207,28 @@ h1 {
     padding: 40px 30px;
 }
 
-.story-text {
-    max-width: 750px;
-    margin: 0 auto 50px;
-    line-height: 1.8;
+.story-text{
+  max-width: 750px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.story-text p{
+  margin-bottom: 18px;
+  text-indent: 35px; /* recuo no começo de cada parágrafo */
+}
+
+/* opcional: o primeiro parágrafo sem recuo 
+.story-text p:first-child{
+  text-indent: 0;
+}*/
+
+@media (min-width: 768px){
+  .story-text{
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 /* Grade de fotos e vídeos */
