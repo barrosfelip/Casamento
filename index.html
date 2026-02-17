@@ -1,4 +1,4 @@
-<!DOCTYPE html><script src="script.js"></script>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -162,23 +162,28 @@
       Escolha um presente simbólico para nos presentear 💛
     </p>
 
-    <div class="gifts">
-      <div class="gift-card">
-        <h3>Lua de Mel 🌿</h3>
-        <span>R$ 300,00</span>
-        <button>Presentear</button>
-      </div>
+      <div class="gifts">
+        <div class="gift-card">
+          <h3>Lua de Mel 🌿</h3>
+          <span>R$ 300,00</span>
+
+          <button class="btn-presentear" data-titulo="Lua de Mel 🌿" data-valor="300">
+            Presentear
+          </button>
+        </div>
 
       <div class="gift-card">
         <h3>Jantar Especial 🍷</h3>
         <span>R$ 150,00</span>
-        <button>Presentear</button>
+        <button class="btn-presentear" data-titulo="Jantar Especial 🍷" data-valor="150">
+          Presentear</button>
       </div>
 
       <div class="gift-card">
         <h3>Novo Lar 🏡</h3>
-        <span>R$ 250,00</span>
-        <button>Presentear</button>
+        <span>R$ 100,00</span>
+        <button class="btn-presentear" data-titulo="Novo Lar 🏡" data-valor="1">
+          Presentear</button>
       </div>
     </div>
       <div class="more-gifts">
@@ -203,7 +208,42 @@
 
 
 
+
+<div id="pixModal" class="pix-modal pix-modal--hidden">
+  <div class="pix-modal__card">
+
+    <h3 class="subtitle" id="pixTitulo"></h3>
+    <p class="text text--muted" id="pixValor"></p>
+
+    <div class="pix-form">
+    <button class="btn btn--filled" id="btnGerarPix" type="button">
+        Gerar PIX
+      </button>
+    </div>
+
+    <div id="pixGerado" style="display:none;">
+      <div class="pix-modal__qr">
+        <canvas id="pixCanvas"></canvas>
+      </div>
+
+      <p class="text text--muted pix-modal__label">PIX Copia e Cola</p>
+      <textarea id="pixCopiaCola" class="pix-modal__textarea" readonly></textarea>
+
+      <div class="btn-row">
+        <button class="btn btn--filled" id="btnCopiarPix" type="button">
+          Copiar PIX
+        </button>
+        <button class="btn btn--outline" id="btnFecharPix" type="button">
+          Fechar
+        </button>
+      </div>
+    </div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
-
