@@ -56,16 +56,29 @@ body {
     color: #8c9b88; 
     display: block;
     margin-bottom: 5px;
+    margin-left: 16px; /* move pra direita */
 }
 
 /* Espaço entre "Casamento" e o primeiro nome */
 .script { 
     font-family: 'Great Vibes', cursive; 
-    font-size: 2.2rem; 
+    font-size: 4.8rem; 
     color: #b8a46a; 
-    margin-bottom: 15px; /* Espaço aumentado aqui */
     display: block; 
+    margin-top: 0;         /* remove espaço acima */
+    line-height: 0.5;      /* aproxima o texto de cima */
+    margin-right: 16px; /* move pra direita */
+
 } 
+
+.localT { 
+  margin-top: 10px;   /* não exagera */
+  font-size: 0.95rem;
+  line-height: 1.2;
+  color: #5a5a5a;
+}
+
+
 
 /* Espaço entre os nomes dos noivos e o texto de convite */
 h1 { 
@@ -99,25 +112,37 @@ h1 {
 .info strong { font-size: 1.6rem; color: #6f7f6b; display: block; }
 .info span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
 
+
+/* Espaço na 2 seção titulo  */
+.script2 { 
+  font-family: 'Great Vibes', cursive; 
+  font-size: 2.4rem; 
+  line-height: 1;
+  color: #b8a46a; 
+  display: block; 
+  margin: 0 0 10px 0;   /* espaçamento padrão abaixo */
+  line-height: 1;      
+}
+
 /* Espaço para o Local */
-.local { 
-    margin-top: 30px; /* Distância final para o local no rodapé do card */
-    font-size: 0.95rem;
-    line-height: 1.0;
+.local {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #cfd8cc;
 }
 
 .local strong {
-    color: #6f7f6b;
-    display: block;
-    margin-bottom: 2px;
+  color: #6f7f6b;
+  font-weight: 600;
 }
+
 
 /* ============================================================
    2. SEGUNDA SEÇÃO: EVENTO E CONTAGEM (Fundo Verde Suave)
    ============================================================ */
 #evento-detalhes {
     background-color: #f0f3ef; /* Cor de destaque para separar as seções */
-    padding: 80px 20px;
+    padding: 30px 20px;
     border-top: 1px solid #cfd8cc;
     border-bottom: 1px solid #cfd8cc;
     display: flex;
@@ -164,7 +189,7 @@ h1 {
 
 .info-item {
     flex: 1;
-    min-width: 280px;
+    min-width: 360px;
     max-width: 450px;
     background: #ffffff;
     padding: 30px;
@@ -179,7 +204,7 @@ h1 {
    ============================================================ */
 .story-section {
     background: #fdfdfb; 
-    padding: 100px 20px;
+    padding: 40px 30px;
 }
 
 .story-text {
@@ -209,7 +234,7 @@ h1 {
    4. QUARTA SEÇÃO: LISTA DE PRESENTES
    ============================================================ */
 .gifts-section {
-    background: #ffffff;
+    background-color: #f0f3ef; /* Cor de destaque para separar as seções */
     padding: 80px 20px;
 }
 
@@ -239,6 +264,7 @@ h1 {
 
 /* Botão padrão do site */
 .btn-more, .gift-card button {
+    
     display: inline-block;
     text-decoration: none;
     padding: 12px 25px;
@@ -264,7 +290,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 40px auto;
+    margin: 40px auto 18px auto;
     width: 80%;
 }
 
@@ -280,6 +306,7 @@ h1 {
 
 .divisor-fleur-de-lis .icon { 
     color: #b8a46a; 
+    line-height: 1;
     padding: 0 15px; 
     font-size: 24px; 
 }
@@ -289,5 +316,51 @@ h1 {
    ============================================================ */
 footer { 
     padding: 60px 20px; 
-    background: #f0f3ef; /* Mesma cor da seção de evento para fechar o design */
+    background: #ffffff; /* Mesma cor da seção de evento para fechar o design */
+}
+
+/* =========================================================
+   TELA DE ENTRADA (Overlay elegante)
+   ========================================================= */
+
+.entrada{
+  position: fixed;
+  inset: 0;
+  background: rgba(253, 252, 249, 0.92);
+  backdrop-filter: blur(10px);
+  z-index: 99999;
+
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.entrada__card{
+  width: min(520px, 100%);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 6px);
+  padding: 38px 26px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.entrada__titulo{
+  font-family: var(--font-script);
+  font-size: 64px;
+  font-weight: 400;
+  color: var(--gold);
+  margin: 10px 0;
+  line-height: 1;
+}
+
+.entrada__texto{
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+/* Quando esconder */
+.entrada--hidden{
+  display: none;
 }
