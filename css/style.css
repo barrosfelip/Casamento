@@ -1,301 +1,188 @@
-/* ============================================================
-   0. CONFIGURAÇÕES GERAIS E RESET
-   ============================================================ */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+/* ======================================================
+   VARIÁVEIS DE CORES (paleta pastel romântica)
+   ====================================================== */
+:root {
+  --bg: #fdfdfb;
+  --text: #4d4d4d;
+  --text-muted: #838d7d;
+  --accent-gold: #c0976e;
+  --accent-pink: #d8a19a;
+  --green-light: #f0f3ef;
+  --border-light: #cfd8cc;
+  --shadow-soft: rgba(0,0,0,0.08);
 }
 
-body { 
-    background-color: #fdfdfb; /* Fundo off-white geral */
-    font-family: 'Playfair Display', serif;
-    color: #5a5a5a;
-    overflow-x: hidden;
-    text-align: center; /* Centralização base para textos */
-} 
+/* ======================================================
+   RESET / BASE
+   ====================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Playfair Display', serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+}
 
-/* Estilos de textos reutilizáveis em várias seções */
-.script { 
-    font-family: 'Great Vibes', cursive; 
-    font-size: 2.2rem; 
-    color: #b8a46a; 
-    margin-bottom: 10px; 
-    display: block; 
-} 
+/* ======================================================
+   UTILITÁRIOS
+   ====================================================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+.grid {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.section {
+  padding: 60px 0;
+  background: var(--bg);
+}
+.section-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: var(--accent-gold);
+}
+.section-text {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: var(--text);
+}
 
-/* ============================================================
-   1. PRIMEIRA SEÇÃO: HERO (Ajuste de Espaçamentos)
-   ============================================================ */
+/* ======================================================
+   HERO
+   ====================================================== */
 .hero {
-    min-height: 100vh;
-    background-image: url("../assets/fundo.jpeg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 15px;
+  height: 100vh;
+  background: url("../assets/fundo.jpeg") center/cover no-repeat;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.hero-inner {
+  background: rgba(255,255,255,0.75);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow-soft);
+}
+.save {
+  color: var(--text-muted);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  color: var(--accent-gold);
+}
+.date {
+  font-size: 20px;
+  color: var(--text);
+  margin: 8px 0;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.93);
-    border: 1px solid #cfd8cc;
-    max-width: 450px; /* Aumentei um pouco a largura para o texto respirar */
-    width: 100%;
-    padding: 60px 35px; /* Mais preenchimento interno */
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+/* ======================================================
+   BOTÕES PADRÃO
+   ====================================================== */
+.btn {
+  padding: 12px 25px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-primary {
+  border: 1px solid var(--accent-gold);
+  background: var(--accent-gold);
+  color: var(--bg);
+}
+.btn-primary:hover {
+  background: var(--accent-pink);
+  border-color: var(--accent-pink);
 }
 
-/* Espaço abaixo do "Save the Date" e "Casamento" */
-.save { 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    font-size: 0.75rem; 
-    color: #8c9b88; 
-    display: block;
-    margin-bottom: 5px;
+/* ======================================================
+   EVENTO / CONTADOR
+   ====================================================== */
+.section-event {
+  background: var(--green-light);
+  border-top: 1px solid var(--border-light);
 }
-
-/* Espaço entre "Casamento" e o primeiro nome */
-.script { 
-    font-family: 'Great Vibes', cursive; 
-    font-size: 2.2rem; 
-    color: #b8a46a; 
-    margin-bottom: 15px; /* Espaço aumentado aqui */
-    display: block; 
-} 
-
-/* Espaço entre os nomes dos noivos e o texto de convite */
-h1 { 
-    font-size: 2.6rem; 
-    color: #6f7f6b; 
-    font-weight: 400; 
-    margin: 15px 0; /* Espaço entre Felipe & Maria Tereza */
-} 
-
-.amp { font-size: 1.8rem; color: #b8a46a; display: block; margin: -5px 0; }
-
-/* Espaço para o parágrafo de introdução */
-.text { 
-    margin: 25 px 0; /* Aumenta o espaço em cima e embaixo do texto */
-    font-size: 1rem;
-    line-height: 1.6;
-    font-style: italic;
-} 
-
-/* Espaço para o bloco de Data e Hora */
-.info { 
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0; /* Mais distância entre o texto e a data */
-    padding: 20px 0;
-    border-top: 1px solid #eee; /* Linhas sutis para destacar a data */
-    border-bottom: 1px solid #eee;
-} 
-
-.info strong { font-size: 1.6rem; color: #6f7f6b; display: block; }
-.info span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
-
-/* Espaço para o Local */
-.local { 
-    margin-top: 30px; /* Distância final para o local no rodapé do card */
-    font-size: 0.95rem;
-    line-height: 1.0;
-}
-
-.local strong {
-    color: #6f7f6b;
-    display: block;
-    margin-bottom: 2px;
-}
-
-/* ============================================================
-   2. SEGUNDA SEÇÃO: EVENTO E CONTAGEM (Fundo Verde Suave)
-   ============================================================ */
-#evento-detalhes {
-    background-color: #f0f3ef; /* Cor de destaque para separar as seções */
-    padding: 80px 20px;
-    border-top: 1px solid #cfd8cc;
-    border-bottom: 1px solid #cfd8cc;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Garante que tudo dentro da seção fique no meio */
-}
-
-/* Título centralizado */
-#status-evento {
-    color: #6f7f6b;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Timer / Contador */
-#timer {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 50px;
-}
-
 .tempo-box {
-    padding: 15px;
-    min-width: 75px;
-    background: #ffffff;
-    border: 1px solid #cfd8cc;
+  background: var(--bg);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px var(--shadow-soft);
+  width: 100px;
+}
+.tempo-box span {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+.tempo-box small {
+  font-size: 14px;
+  color: var(--text-muted);
 }
 
-.tempo-box span { display: block; font-size: 1.8rem; color: #6f7f6b; font-weight: bold; }
-.tempo-box small { color: #b8a46a; text-transform: uppercase; font-size: 0.7rem; }
-
-/* Bloco de endereços (Cerimônia e Festa lado a lado) */
-.duas-colunas {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
+/* ======================================================
+   STORY
+   ====================================================== */
+.card-story img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  border-bottom: 1px solid var(--border-light);
+}
+.card-story p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--text-muted);
 }
 
-.info-item {
-    flex: 1;
-    min-width: 280px;
-    max-width: 450px;
-    background: #ffffff;
-    padding: 30px;
-    border: 1px solid #cfd8cc;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza textos dentro do card de endereço */
+/* ======================================================
+   PRESENTES
+   ====================================================== */
+.card-gift {
+  padding: 20px;
+  max-width: 280px;
+  border: 1px solid var(--border-light);
+  border-radius: 13px;
+  background: var(--bg);
+  box-shadow: 0 3px 8px var(--shadow-soft);
+}
+.card-gift p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: var(--text);
 }
 
-/* ============================================================
-   3. TERCEIRA SEÇÃO: NOSSA HISTÓRIA
-   ============================================================ */
-.story-section {
-    background: #fdfdfb; 
-    padding: 100px 20px;
+/* ======================================================
+   FOOTER
+   ====================================================== */
+.footer {
+  background: var(--green-light);
+  padding: 20px 0;
+  border-top: 1px solid var(--border-light);
+}
+.footer p {
+  font-size: 14px;
+  color: var(--text-muted);
 }
 
-.story-text {
-    max-width: 750px;
-    margin: 0 auto 50px;
-    line-height: 1.8;
+/* ======================================================
+   RESPONSIVO
+   ====================================================== */
+@media(max-width:768px){
+  .script { font-size: 45px; }
+  .section-title { font-size: 28px; }
+  .tempo-box { width: 90px; }
 }
-
-/* Grade de fotos e vídeos */
-.story-media {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.story-media img, .story-media video {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid #e2e6df;
-}
-
-/* ============================================================
-   4. QUARTA SEÇÃO: LISTA DE PRESENTES
-   ============================================================ */
-.gifts-section {
-    background: #ffffff;
-    padding: 80px 20px;
-}
-
-.gifts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-.gift-card {
-    border: 1px solid #cfd8cc;
-    padding: 30px;
-    transition: 0.3s;
-    background: #fff;
-}
-
-.gift-card:hover { 
-    transform: translateY(-5px); 
-    border-color: #b8a46a; 
-}
-
-/* ============================================================
-   5. COMPONENTES REUTILIZÁVEIS (Botões e Divisores)
-   ============================================================ */
-
-/* Botão padrão do site */
-.btn-more, .gift-card button {
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px 25px;
-    border: 1px solid #b8a46a;
-    background: transparent;
-    color: #b8a46a;
-    border-radius: 30px;
-    transition: 0.3s;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    margin-top: 15px;
-}
-
-.btn-more:hover, .gift-card button:hover {
-    background: #b8a46a;
-    color: #fff;
-}
-
-/* Divisor decorativo Flor de Liz */
-.divisor-fleur-de-lis {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 40px auto;
-    width: 80%;
-}
-
-.divisor-fleur-de-lis::before, 
-.divisor-fleur-de-lis::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #b8a46a);
-}
-
-.divisor-fleur-de-lis::after { background: linear-gradient(to left, transparent, #b8a46a); }
-
-.divisor-fleur-de-lis .icon { 
-    color: #b8a46a; 
-    padding: 0 15px; 
-    font-size: 24px; 
-}
-
-/* ============================================================
-   6. RODAPÉ (Footer)
-   ============================================================ */
-footer { 
-    padding: 60px 20px; 
-    background: #f0f3ef; /* Mesma cor da seção de evento para fechar o design */
-}
-
-
-
-
-
-
-
-
-
